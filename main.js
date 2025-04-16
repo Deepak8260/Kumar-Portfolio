@@ -1,5 +1,6 @@
-import * as THREE from './node_modules/three/build/three.module.js';
-import { OrbitControls } from './node_modules/three/examples/jsm/controls/OrbitControls.js';
+// Update the imports
+import * as THREE from 'https://unpkg.com/three@0.157.0/build/three.module.js';
+import { OrbitControls } from 'https://unpkg.com/three@0.157.0/examples/jsm/controls/OrbitControls.js';
 
 // Scene setup
 const scene = new THREE.Scene();
@@ -18,13 +19,14 @@ renderer.shadowMap.enabled = true;
 // Profile Image
 const textureLoader = new THREE.TextureLoader();
 const profileTexture = textureLoader.load(
-    './image.jpg',
+    '/image.jpg', // Changed path to absolute
     function(texture) {
         console.log('Image loaded successfully');
-        texture.minFilter = THREE.LinearFilter;
-        texture.magFilter = THREE.LinearFilter;
+        profileMesh.material.needsUpdate = true; // Force material update
     },
-    undefined,
+    function(progress) {
+        console.log('Loading image...', progress);
+    },
     function(error) {
         console.error('Error loading the image:', error);
     }
@@ -36,7 +38,9 @@ const profileMaterial = new THREE.MeshStandardMaterial({
     map: profileTexture,
     side: THREE.DoubleSide,
     metalness: 0.3,
-    roughness: 0.6
+    roughness: 0.6,
+    transparent: true,
+    opacity: 1
 });
 const profileMesh = new THREE.Mesh(profileGeometry, profileMaterial);
 profileMesh.castShadow = true;
@@ -77,7 +81,12 @@ const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
 scene.add(ambientLight);
 
 // Camera position
-camera.position.z = 15;
+camera.position.z = 20; // Moved camera back a bit
+
+// In the profile mesh section
+profileMesh.position.set(0, 0, 0);
+profileMesh.rotation.x = Math.PI * 0.5; // Rotate to face camera
+scene.add(profileMesh);
 
 // Controls
 const controls = new OrbitControls(camera, renderer.domElement);

@@ -3,21 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Portfolio</title>
+    <title>Deepak Kumar Mohanty - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <canvas class="webgl"></canvas>
     <nav>
         <a href="#home">Home</a>
-        <a href="#work">Work</a>
         <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#work">Work</a>
         <a href="#contact">Contact</a>
     </nav>
-    <section class="section" id="home">
-        <h1>Welcome to My Portfolio</h1>
+
+    <section id="home">
+        <div class="profile-container">
+            <div class="profile-wrapper">
+                <img src="image.jpg" alt="Deepak Kumar Mohanty" class="profile-image" id="profileImage">
+            </div>
+            <h1 id="profileName">Welcome to My Portfolio</h1>
+            <p id="profileTitle"></p>
+            <div class="social-links">
+                <a href="" id="linkedinLink" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="" id="githubLink" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="" id="emailLink"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
     </section>
-    <!-- Add type="module" to enable ES6 imports -->
-    <script type="module" src="./main.js"></script>
+
+    <!-- Add this new skills section -->
+    <section id="skills">
+        <h2>Skills & Expertise</h2>
+        <div class="skills-container">
+            <!-- Skills will be dynamically populated here -->
+        </div>
+    </section>
+
+    <section id="work">
+        <h2>My Work</h2>
+        <div class="work-grid" id="projectsContainer"></div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <p id="bio"></p>
+            <div class="experience-section">
+                <h3>Experience</h3>
+                <div id="experienceContainer"></div>
+            </div>
+            <div class="education-section">
+                <h3>Education</h3>
+                <div id="educationContainer"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add this before the closing body tag -->
+    <section id="activities">
+        <h2>Featured Activities</h2>
+        <div class="activities-container" id="activitiesContainer"></div>
+    </section>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,115 @@
+{
+    "name": "Deepak Kumar Mohanty",
+    "profile": {
+      "headline": "Data Science Intern at Aimerz.ai | BCA Graduate with a Passion for Crafting AI-Driven Innovations",
+      "location": "Baleswar, Odisha, India",
+      "about": "BCA graduate passionate about pushing the limits of data science and exploring AI to solve tough problems. Skilled in advanced AI tools with a goal to drive innovation through data.",
+      "profile_photo": "https://media.licdn.com/dms/image/v2/D5603AQEsgt8JuQireQ/profile-displayphoto-shrink_200_200/B56ZSXo5DaHwAc-/0/1737710867117?e=2147483647&v=beta&t=1ZZuLegJPCDzJRDVWwr9EmnL8vOPHxcJHE0zSBXt0NQ",
+      "background_image": "https://media.licdn.com/dms/image/v2/D5616AQE_DJNyYbQptw/profile-displaybackgroundimage-shrink_200_800/profile-displaybackgroundimage-shrink_200_800/0/1734779933933?e=2147483647&v=beta&t=mNX0csqUhxI32xy90unjqNe17PLMvqdHIuidiTPdtZ4",
+      "linkedin_url": "https://www.linkedin.com/in/deepak-kumar-mohanty-09aa59230",
+      "followers": "1K+",
+      "connections": "500+"
+    },
+    "experience": [
+      {
+        "title": "Data Science Intern",
+        "company": "AIMERZ",
+        "company_logo": "https://media.licdn.com/dms/image/v2/D560BAQEJ1F0KbhTEGA/company-logo_100_100/company-logo_100_100/0/1726232444400/aimerz_logo?e=2147483647&v=beta&t=YANGOev7rD0L__aL0iJHk-Wlul3BozCdvcDS6dDuQpk",
+        "company_link": "https://in.linkedin.com/company/aimerz?trk=public_profile_experience-item_profile-section-card_subtitle-click",
+        "start_date": "Nov 2024",
+        "end_date": "Present",
+        "duration": "6 months"
+      },
+      {
+        "title": "Professional Development",
+        "company": "Career Break",
+        "start_date": "May 2024",
+        "end_date": "Oct 2024",
+        "duration": "6 months"
+      }
+    ],
+    "education": [
+      {
+        "institution": "Bhadrak Autonomous College",
+        "degree": "Bachelor's in Computer Application (BCA)",
+        "field": "Computer Programming",
+        "duration": "2021 - 2024",
+        "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQH3yDpggvrleQ/company-logo_100_100/company-logo_100_100/0/1687778014361?e=2147483647&v=beta&t=ue4yltWsux46BQt6K7cgNXbTsx2PPmh6kZVXgWQ6GfU",
+        "link": "https://in.linkedin.com/school/bhadrak-auto.-college/?trk=public_profile_school_profile-section-card_image-click"
+      }
+    ],
+    "highlighted_activities": [
+      {
+        "title": "Are you also learning the same concept again and again, feeling stuck and underconfident?",
+        "link": "https://www.linkedin.com/posts/yesmithun_are-you-also-learning-the-same-concept-again-activity-7317825699933777920-LOk1",
+        "image": "https://media.licdn.com/dms/image/v2/D4D22AQFVJYV-C9H8CA/feedshare-shrink_2048_1536/B4DZY4jsHJGwAw-/0/1744705604309?e=2147483647&v=beta&t=AQhTmwKr3F2IiEhuCOnQyDT1nqHvcofBkxad5sS-uIo"
+      },
+      {
+        "title": "Just completed my Micro-Certification – Welcome to ServiceNow from ServiceNow!",
+        "link": "https://www.linkedin.com/posts/arpita-verma-8b2760251_servicenow-microcertification-certified-activity-7317244705186951168-sky8",
+        "image": "https://media.licdn.com/dms/image/v2/D5622AQGrFzdRs7mlMQ/feedshare-shrink_2048_1536/B56ZYwTR59H0Ao-/0/1744567084407?e=2147483647&v=beta&t=59XwnSLZhsQ7YDFXoLLWiOG12mfZE5paXAXVMfRRmPs"
+      },
+      {
+        "title": "Power-Packed Week on Sequence Modeling, Anomaly Detection & Recommender Systems",
+        "link": "https://www.linkedin.com/posts/joyeeta-majumdar-a7a067281_power-packed-week-on-sequence-modeling-activity-7317224549010337792-VWVG",
+        "image": "https://media.licdn.com/dms/image/v2/D4E22AQG1wApc9R_J2w/feedshare-shrink_2048_1536/B4EZYwA8UyG0Ao-/0/1744562276776?e=2147483647&v=beta&t=JxYiFbve5Oc7XPHNJG6JVCbhHaPIAvwALSOa1bV4th4"
+      },
+      {
+        "title": "Crafting a Smart Expense Tracker with React.js",
+        "link": "https://www.linkedin.com/posts/rachana-jena12_reactjs-tailwindcss-frontenddevelopment-activity-7316320352249253888-Vjf-",
+        "image": "https://media.licdn.com/dms/image/v2/D5605AQEBW4Zb0kEYeg/videocover-high/B56ZYg8BC.GcBs-/0/1744309337004?e=2147483647&v=beta&t=EmOwZElYyaRcsw8Uf37AtTTyZwGTn2dTYfD1XSUGbCw"
+      }
+    ],
+    "skills": {
+      "industry_knowledge": [
+        "Machine Learning",
+        "Statistical Data Analysis",
+        "Artificial Intelligence (AI)",
+        "Generative AI",
+        "Artificial Intelligence for Business",
+        "Natural Language Processing (NLP)",
+        "Project Management",
+        "Programming Concepts",
+        "Creative Problem Solving",
+        "Mathematics",
+        "Secondary Mathematics",
+        "Data Structures"
+      ],
+      "tools_and_technologies": [
+        "Git",
+        "GitHub",
+        "Git BASH",
+        "Postman API",
+        "Microsoft Office",
+        "Linux",
+        "MongoDB",
+        "SQL",
+        "HTML"
+      ],
+      "libraries_frameworks": [
+        "NumPy",
+        "Pandas",
+        "Matplotlib",
+        "Seaborn",
+        "Plotly"
+      ],
+      "programming_languages": [
+        "Python",
+        "C",
+        "C++",
+        "Core Java",
+        "SQL"
+      ],
+      "concepts_approaches": [
+        "Object-Oriented Programming (OOP)",
+        "NoSQL Databases",
+        "Prompt Engineering for Generative AI"
+      ],
+      "interpersonal_skills": [
+        "Communication",
+        "Team Collaboration",
+        "Creative Problem Solving"
+      ]
+    }
+  }
+  
