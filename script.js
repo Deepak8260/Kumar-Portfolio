@@ -30,7 +30,7 @@ function populatePortfolio(data) {
     // Profile Section
     document.getElementById('profileName').textContent = data.name;
     document.getElementById('profileTitle').textContent = data.profile.headline;
-    document.getElementById('profileImage').src = data.profile.profile_photo;
+    document.getElementById('profileImage').src = 'image.jpg'; // Direct reference to image.jpg
     document.getElementById('bio').textContent = data.profile.about;
     document.getElementById('linkedinLink').href = data.profile.linkedin_url;
 
@@ -87,43 +87,42 @@ function populatePortfolio(data) {
     }
 
     // Skills Section
-    // In your populatePortfolio function, update the skills section
     const skillCategories = {
-        'industrySkills': { 
-            title: 'Industry Knowledge', 
+        'industrySkills': {
+            title: 'Industry Knowledge',
             icon: 'fas fa-brain',
-            skills: data.skills.industry_knowledge 
+            skills: data.skills.industry_knowledge
         },
-        'toolsSkills': { 
-            title: 'Tools & Technologies', 
+        'toolsSkills': {
+            title: 'Tools & Technologies',
             icon: 'fas fa-tools',
-            skills: data.skills.tools_and_technologies 
+            skills: data.skills.tools_and_technologies
         },
-        'programmingSkills': { 
-            title: 'Programming Languages', 
+        'programmingSkills': {
+            title: 'Programming Languages',
             icon: 'fas fa-code',
-            skills: data.skills.programming_languages 
+            skills: data.skills.programming_languages
         },
-        'librariesSkills': { 
-            title: 'Libraries & Frameworks', 
+        'librariesSkills': {
+            title: 'Libraries & Frameworks',
             icon: 'fas fa-puzzle-piece',
-            skills: data.skills.libraries_frameworks 
+            skills: data.skills.libraries_frameworks
         },
-        'conceptsSkills': { 
-            title: 'Concepts & Approaches', 
+        'conceptsSkills': {
+            title: 'Concepts & Approaches',
             icon: 'fas fa-lightbulb',
-            skills: data.skills.concepts_approaches 
+            skills: data.skills.concepts_approaches
         },
-        'interpersonalSkills': { 
-            title: 'Interpersonal Skills', 
+        'interpersonalSkills': {
+            title: 'Interpersonal Skills',
             icon: 'fas fa-users',
-            skills: data.skills.interpersonal_skills 
+            skills: data.skills.interpersonal_skills
         }
     };
-    
+
     const skillsContainer = document.querySelector('.skills-container');
     skillsContainer.innerHTML = '';
-    
+
     for (const [categoryId, category] of Object.entries(skillCategories)) {
         const categoryElement = document.createElement('div');
         categoryElement.className = 'skills-category';
@@ -146,10 +145,18 @@ function populatePortfolio(data) {
             </div>
         `;
         skillsContainer.appendChild(categoryElement);
-    
-        // Add click event for dropdown
+
+        // ✅ Fixed toggle behavior - only one section open at a time
         const header = categoryElement.querySelector('.skills-header');
-        header.addEventListener('click', () => {
+        header.addEventListener('click', function () {
+            const allCategories = document.querySelectorAll('.skills-category');
+
+            allCategories.forEach(cat => {
+                if (cat !== categoryElement) {
+                    cat.classList.remove('active');
+                }
+            });
+
             categoryElement.classList.toggle('active');
         });
     }
@@ -157,3 +164,47 @@ function populatePortfolio(data) {
 
 // Initialize the portfolio
 document.addEventListener('DOMContentLoaded', loadPortfolioData);
+
+// Add these at the beginning of your script.js
+document.addEventListener('DOMContentLoaded', () => {
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.style.padding = '1rem 10%';
+            navbar.style.background = 'rgba(17, 24, 39, 0.98)';
+        } else {
+            navbar.style.padding = '1.5rem 10%';
+            navbar.style.background = 'rgba(17, 24, 39, 0.95)';
+        }
+    });
+
+    // Active nav item
+    const navItems = document.querySelectorAll('.nav-item');
+    const sections = document.querySelectorAll('section');
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (window.scrollY >= sectionTop - 60) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('href').slice(1) === current) {
+                item.classList.add('active');
+            }
+        });
+    });
+
+    // Mobile menu toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    });
+});

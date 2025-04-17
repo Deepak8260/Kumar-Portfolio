@@ -9,34 +9,148 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#work">Work</a>
-        <a href="#contact">Contact</a>
+    <nav class="navbar">
+        <div class="nav-logo">DKM</div>
+        <div class="nav-links">
+            <a href="#home" class="nav-item active"><i class="fas fa-home"></i> Home</a>
+            <a href="#skills" class="nav-item"><i class="fas fa-code"></i> Skills</a>
+            <a href="#experience" class="nav-item"><i class="fas fa-briefcase"></i> Experience</a>
+            <a href="#work" class="nav-item"><i class="fas fa-project-diagram"></i> Projects</a>
+            <a href="#contact" class="nav-item"><i class="fas fa-envelope"></i> Contact</a>
+        </div>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
     </nav>
 
-    <section id="home">
-        <div class="profile-container">
-            <div class="profile-wrapper">
-                <img src="image.jpg" alt="Deepak Kumar Mohanty" class="profile-image" id="profileImage">
+    <section id="home" class="hero-section">
+        <div class="hero-flex">
+            <div class="hero-left">
+                <h1 class="hero-title animate-fadeinup">Welcome to My Portfolio</h1>
+                <div class="hero-subtitle animate-fadeinup" style="animation-delay:0.2s;">Deepak Kumar Mohanty</div>
+                <div class="hero-text animate-fadeinup" style="animation-delay:0.4s;">
+                    BCA graduate passionate about pushing the limits of data science and exploring AI to solve tough problems. Skilled in advanced AI tools with a goal to drive innovation through data.
+                </div>
+                <div class="social-links animate-fadeinup" style="animation-delay:0.6s;">
+                    <a href="" id="linkedinLink" target="_blank" class="social-btn">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="" id="githubLink" target="_blank" class="social-btn">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="" id="emailLink" class="social-btn">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                </div>
+                <a href="#work" class="cta-button animate-fadeinup" style="animation-delay:0.8s;">View My Work</a>
             </div>
-            <h1 id="profileName">Welcome to My Portfolio</h1>
-            <p id="profileTitle"></p>
-            <div class="social-links">
-                <a href="" id="linkedinLink" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="" id="githubLink" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="" id="emailLink"><i class="fas fa-envelope"></i></a>
+            <div class="hero-right">
+                <img src="image.jpg" alt="Deepak Kumar Mohanty" class="profile-image-vertical animate-slideinright">
+            </div>
+        </div>
+        <div class="hero-background">
+            <div class="shape shape1"></div>
+            <div class="shape shape2"></div>
+            <div class="shape shape3"></div>
+        </div>
+    </section>
+
+    <!-- Add this inside your main content, after the About section -->
+    <section id="skills">
+        <h2>Skills & Expertise</h2>
+        <div class="skills-container">
+            <div class="skills-category">
+                <div class="skills-header">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Industry Knowledge</h3>
+                </div>
+                <div class="skills-list">
+                    <div class="skill-item">Web Development</div>
+                    <div class="skill-item">UI/UX Design</div>
+                    <div class="skill-item">Responsive Design</div>
+                    <div class="skill-item">Database Management</div>
+                    <div class="skill-item">API Development</div>
+                </div>
+            </div>
+    
+            <div class="skills-category">
+                <div class="skills-header">
+                    <i class="fas fa-tools"></i>
+                    <h3>Tools & Technologies</h3>
+                </div>
+                <div class="skills-list">
+                    <div class="skill-item">Git & GitHub</div>
+                    <div class="skill-item">VS Code</div>
+                    <div class="skill-item">Postman</div>
+                    <div class="skill-item">Docker</div>
+                    <div class="skill-item">AWS</div>
+                </div>
+            </div>
+    
+            <div class="skills-category">
+                <div class="skills-header">
+                    <i class="fas fa-code"></i>
+                    <h3>Programming Languages</h3>
+                </div>
+                <div class="skills-list">
+                    <div class="skill-item">HTML5 / CSS3</div>
+                    <div class="skill-item">JavaScript</div>
+                    <div class="skill-item">Python</div>
+                    <div class="skill-item">Java</div>
+                    <div class="skill-item">SQL</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Add this new skills section -->
-    <section id="skills">
-        <h2>Skills & Expertise</h2>
-        <div class="skills-container">
-            <!-- Skills will be dynamically populated here -->
+    <!-- Add this after the skills section and before work section -->
+    <section id="experience-education">
+        <div class="container">
+            <div class="experience-section">
+                <h2>Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-logo">
+                            <img src="aimerz-logo.png" alt="AIMERZ">
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Data Science Intern</h3>
+                            <p class="company">AIMERZ</p>
+                            <p class="duration">Nov 2024 - Present · 6 months</p>
+                        </div>
+                    </div>
+    
+                    <div class="timeline-item">
+                        <div class="timeline-logo">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Professional Development</h3>
+                            <p class="company">Career Break</p>
+                            <p class="duration">May 2024 - Oct 2024 · 6 months</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="education-section">
+                <h2>Education</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-logo">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Bachelor of Computer Applications</h3>
+                            <p class="company">Your University Name</p>
+                            <p class="duration">2021 - 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -108,26 +222,51 @@
         </div>
     </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about-container">
-            <p id="bio"></p>
-            <div class="experience-section">
-                <h3>Experience</h3>
-                <div id="experienceContainer"></div>
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-card-content">
+                        <h4>Email</h4>
+                        <p>your.email@example.com</p>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <div class="contact-card-content">
+                        <h4>Phone</h4>
+                        <p>+91 XXXXXXXXXX</p>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="contact-card-content">
+                        <h4>Location</h4>
+                        <p>Your Location, India</p>
+                    </div>
+                </div>
             </div>
-            <div class="education-section">
-                <h3>Education</h3>
-                <div id="educationContainer"></div>
-            </div>
+            
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
         </div>
     </section>
-
-    <!-- Add this before the closing body tag -->
-    <section id="activities">
-        <h2>Featured Activities</h2>
-        <div class="activities-container" id="activitiesContainer"></div>
-    </section>
+    <!-- Add before closing body tag -->
+    <button id="scrollToTop" class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
     <script src="script.js"></script>
 </body>
 </html>
