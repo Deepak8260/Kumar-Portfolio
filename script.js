@@ -208,3 +208,31 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.classList.toggle('show');
     });
 });
+
+// 3D Tilt Animation for Project Cards
+document.querySelectorAll('.work-item').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left; // x position within the card
+        const y = e.clientY - rect.top;  // y position within the card
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * 10; // max 10deg
+        const rotateY = ((x - centerX) / centerX) * 10;
+        card.style.transform = `rotateX(${-rotateX}deg) rotateY(${rotateY}deg) scale(1.04)`;
+        card.classList.add('tilted');
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
+        card.classList.remove('tilted');
+    });
+
+    card.addEventListener('mousedown', () => {
+        card.style.transform += ' scale(0.97)';
+    });
+
+    card.addEventListener('mouseup', () => {
+        card.style.transform = card.style.transform.replace(' scale(0.97)', '');
+    });
+});
