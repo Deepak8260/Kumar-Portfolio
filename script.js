@@ -41,10 +41,16 @@ function populatePortfolio(data) {
         expElement.className = 'experience-item';
         expElement.innerHTML = `
             <div class="exp-header">
-                ${exp.company_logo ? `<img src="${exp.company_logo}" alt="${exp.company}" class="company-logo">` : ''}
+                ${exp.company_logo ? `
+                    <a href="${exp.company_linkedin_link}" target="_blank">
+                        <img src="${exp.company_logo}" alt="${exp.company}" class="company-logo">
+                    </a>` : ''}
                 <div>
                     <h4>${exp.title}</h4>
-                    <p class="company-name">${exp.company}</p>
+                    ${exp.company_website_link ? 
+                        `<p class="company"><a href="${exp.company_website_link}" target="_blank">${exp.company}</a></p>` :
+                        `<p class="company">${exp.company}</p>`
+                    }
                     <p class="period">${exp.start_date} - ${exp.end_date} · ${exp.duration}</p>
                 </div>
             </div>
@@ -59,10 +65,16 @@ function populatePortfolio(data) {
         eduElement.className = 'education-item';
         eduElement.innerHTML = `
             <div class="edu-header">
-                ${edu.logo ? `<img src="${edu.logo}" alt="${edu.institution}" class="institution-logo">` : ''}
+                ${edu.logo ? `
+                    <a href="${edu.college_linkedin_link}" target="_blank">
+                        <img src="${edu.logo}" alt="${edu.institution}" class="institution-logo">
+                    </a>` : ''}
                 <div>
                     <h4>${edu.degree}</h4>
-                    <p>${edu.institution}</p>
+                    ${edu.college_website_link ? 
+                        `<p class="institution"><a href="${edu.college_website_link}" target="_blank">${edu.institution}</a></p>` :
+                        `<p class="institution">${edu.institution}</p>`
+                    }
                     <p>${edu.duration}</p>
                     <p>${edu.field}</p>
                 </div>
@@ -236,3 +248,41 @@ document.querySelectorAll('.work-item').forEach(card => {
         card.style.transform = card.style.transform.replace(' scale(0.97)', '');
     });
 });
+
+// Fetch data from data.json
+fetch('data.json')
+    .then(response => response.json())
+    .then(data => {
+        // Update experience section
+        const aimerz = data.experience[0];
+        const education = data.education[0];
+
+        // Update AIMERZ experience
+        const aimerzLogo = document.querySelector('.experience-section .timeline-item:first-child .timeline-logo');
+        aimerzLogo.innerHTML = `
+            <a href="${aimerz.company_linkedin_link}" target="_blank">
+                <img src="${aimerz.company_logo}" alt="${aimerz.company}">
+            </a>
+        `;
+
+        // Update company name with website link
+        const aimerzCompany = document.querySelector('.experience-section .timeline-item:first-child .timeline-content .company');
+        aimerzCompany.innerHTML = `<a href="${aimerz.company_website_link}" target="_blank">${aimerz.company}</a>`;
+
+        // Update Education section
+        const educationLogo = document.querySelector('.education-section .timeline-item .timeline-logo');
+        educationLogo.innerHTML = `
+            <a href="${education.college_linkedin_link}" target="_blank">
+                <img src="${education.logo}" alt="${education.institution}">
+            </a>
+        `;
+        
+        // Update education content with website link
+        const educationContent = document.querySelector('.education-section .timeline-item .timeline-content');
+        educationContent.innerHTML = `
+            <h3>${education.degree}</h3>
+            <p class="company"><a href="${education.college_website_link}" target="_blank">${education.institution}</a></p>
+            <p class="duration">${education.duration}</p>
+        `;
+    })
+    .catch(error => console.error('Error loading data:', error));

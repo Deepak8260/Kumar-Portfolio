@@ -257,6 +257,8 @@ body {
     box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
 }
 
+
+
 /* Background Shapes */
 .hero-background {
     position: absolute;
@@ -418,10 +420,44 @@ body {
 }
 
 .skill-item {
-    color: var(--text-gray);
-    padding: 0.5rem 0;
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
+    margin-bottom: 1.2rem;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.percent {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(79, 70, 229, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.company a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.company a:hover {
+    color: #4a90e2; /* or your preferred hover color */
+}
+.progress {
+    height: 100%;
+    background: var(--gradient);
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+.skill-item:hover .progress {
+    filter: brightness(1.1);
 }
 
 .skill-item:hover {

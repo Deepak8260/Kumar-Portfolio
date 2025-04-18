@@ -14,7 +14,8 @@
         "title": "Data Science Intern",
         "company": "AIMERZ",
         "company_logo": "https://media.licdn.com/dms/image/v2/D560BAQEJ1F0KbhTEGA/company-logo_100_100/company-logo_100_100/0/1726232444400/aimerz_logo?e=2147483647&v=beta&t=YANGOev7rD0L__aL0iJHk-Wlul3BozCdvcDS6dDuQpk",
-        "company_link": "https://in.linkedin.com/company/aimerz?trk=public_profile_experience-item_profile-section-card_subtitle-click",
+        "company_linkedin_link": "https://in.linkedin.com/company/aimerz?trk=public_profile_experience-item_profile-section-card_subtitle-click",
+        "company_website_link": "https://aimerz.ai/",
         "start_date": "Nov 2024",
         "end_date": "Present",
         "duration": "6 months"
@@ -34,7 +35,8 @@
         "field": "Computer Programming",
         "duration": "2021 - 2024",
         "logo": "https://media.licdn.com/dms/image/v2/D4D0BAQH3yDpggvrleQ/company-logo_100_100/company-logo_100_100/0/1687778014361?e=2147483647&v=beta&t=ue4yltWsux46BQt6K7cgNXbTsx2PPmh6kZVXgWQ6GfU",
-        "link": "https://in.linkedin.com/school/bhadrak-auto.-college/?trk=public_profile_school_profile-section-card_image-click"
+        "college_linkedin_link": "https://in.linkedin.com/school/bhadrak-auto.-college/?trk=public_profile_school_profile-section-card_image-click",
+        "college_website_link": "https://bhadrakcollege.ac.in/"
       }
     ],
     "highlighted_activities": [
@@ -90,7 +92,11 @@
         "Pandas",
         "Matplotlib",
         "Seaborn",
-        "Plotly"
+        "Plotly",
+        "streamlit",
+        "flask",
+        "fastAPI",
+        "Scikit-Learn"
       ],
       "programming_languages": [
         "Python",
@@ -101,12 +107,14 @@
       ],
       "concepts_approaches": [
         "Object-Oriented Programming (OOP)",
-        "NoSQL Databases",
-        "Prompt Engineering for Generative AI"
+        "NoSQL Databases"
       ],
       "interpersonal_skills": [
+        "Time Management",
+        "Adaptability",
         "Communication",
         "Team Collaboration",
+        "Leadership",
         "Creative Problem Solving"
       ]
     }
