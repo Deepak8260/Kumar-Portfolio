@@ -1543,3 +1543,42 @@ footer {
     transform: translateY(-5px);
     box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
 }
+
+
+.projects-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+}
+
+.projects-wrapper {
+    display: inline-flex;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.project-card {
+    min-width: 300px;
+    white-space: normal;
+}
+
+/* Custom scrollbar styling */
+.projects-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.projects-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.projects-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.projects-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
